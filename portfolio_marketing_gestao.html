@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Marketing, Estratégia e Gestão de Projetos.">
+  <title>Marketing, Estratégia & Gestão de Projetos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#123d31;
+      --green-2:#1c5443;
+      --cream:#f5f1e8;
+      --paper:#fffdf9;
+      --text:#17332b;
+      --muted:#64736d;
+      --line:rgba(18,61,49,.14);
+      --shadow:0 18px 50px rgba(18,61,49,.10);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"DM Sans",sans-serif;
+      color:var(--text);
+      background:var(--paper);
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{width:min(1180px,92%);margin:auto}
+    .serif{font-family:"Playfair Display",serif}
+
+    /* NAV */
+    nav{
+      position:absolute;
+      top:0;left:0;right:0;
+      z-index:10;
+      padding:22px 0;
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo{
+      font-family:"Playfair Display",serif;
+      font-size:2rem;
+      font-weight:600;
+      letter-spacing:-2px;
+    }
+    .nav-links{display:flex;gap:34px;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .nav-links a{transition:.25s}
+    .nav-links a:hover{opacity:.55}
+    .nav-cta{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--green);color:white;
+      padding:12px 20px;border-radius:999px;
+      font-size:.75rem;font-weight:700;text-transform:uppercase;
+      transition:.25s;
+    }
+    .nav-cta:hover{transform:translateY(-2px);background:var(--green-2)}
+
+    /* HERO */
+    .hero{
+      min-height:690px;
+      background:
+        radial-gradient(circle at 78% 30%, rgba(28,84,67,.08), transparent 28%),
+        var(--cream);
+      position:relative;
+      overflow:hidden;
+      display:flex;align-items:center;
+      padding:105px 0 55px;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:570px;height:570px;
+      right:-170px;bottom:-310px;
+      border:1px solid rgba(18,61,49,.12);
+      border-radius:50%;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:35px;
+    }
+    .hero-copy{position:relative;z-index:2}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      font-size:.76rem;text-transform:uppercase;
+      font-weight:700;letter-spacing:.13em;
+      margin-bottom:20px;
+      color:var(--green-2);
+    }
+    .eyebrow:before{content:"";width:32px;height:1px;background:var(--green)}
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(3.2rem,6vw,5.6rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+      max-width:680px;
+    }
+    .hero-text{
+      border-left:3px solid #6d9a87;
+      margin:30px 0;
+      padding-left:18px;
+      max-width:590px;
+      font-size:1.1rem;
+    }
+    .hero-text strong{font-weight:700}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:48px;padding:0 21px;border-radius:10px;
+      border:1px solid var(--green);
+      font-size:.76rem;font-weight:700;text-transform:uppercase;
+      transition:.25s;
+    }
+    .btn.primary{background:var(--green);color:#fff}
+    .btn.secondary{background:transparent}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(18,61,49,.12)}
+
+    .hero-visual{position:relative;min-height:540px}
+    .portrait{
+      position:absolute;
+      right:0;bottom:-55px;
+      width:min(500px,95%);
+      height:570px;
+      border-radius:250px 250px 0 0;
+      background:
+        linear-gradient(145deg,rgba(18,61,49,.10),rgba(255,255,255,.55)),
+        url("https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1000&q=85") center/cover;
+      box-shadow:var(--shadow);
+    }
+    .value-card{
+      position:absolute;
+      right:-5px;top:135px;
+      width:210px;
+      background:var(--green);color:#fff;
+      padding:22px;border-radius:18px;
+      box-shadow:0 20px 50px rgba(18,61,49,.25);
+    }
+    .value-card .item{padding:10px 0}
+    .value-card .item + .item{border-top:1px solid rgba(255,255,255,.25)}
+    .value-card strong{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+    .value-card span{font-size:.78rem;color:rgba(255,255,255,.78)}
+
+    /* ABOUT */
+    section{padding:100px 0}
+    .about-grid{
+      display:grid;grid-template-columns:.9fr 1.1fr;
+      gap:75px;align-items:center;
+    }
+    .about-image{
+      aspect-ratio:1.08/1;
+      border-radius:var(--radius);
+      background:url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85") center/cover;
+      box-shadow:var(--shadow);
+    }
+    .section-label{
+      display:inline-block;
+      font-size:.72rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.14em;color:var(--green-2);
+      margin-bottom:10px;
+    }
+    h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(2.3rem,4vw,3.7rem);
+      line-height:1.05;letter-spacing:-.04em;
+      margin-bottom:25px;
+    }
+    .accent-line{width:42px;height:2px;background:var(--green);margin:0 0 24px}
+    .about-copy p{margin-bottom:17px;color:#445750}
+    .about-copy strong{color:var(--text)}
+
+    /* SERVICES */
+    .services{background:#faf8f3}
+    .section-heading{text-align:center;max-width:720px;margin:0 auto 50px}
+    .section-heading h2{margin-bottom:12px}
+    .section-heading p{color:var(--muted)}
+    .cards{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+    }
+    .card{
+      background:#fff;border:1px solid rgba(18,61,49,.08);
+      padding:32px 24px;border-radius:18px;
+      box-shadow:0 8px 25px rgba(18,61,49,.05);
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+    .icon{
+      width:50px;height:50px;border:1px solid rgba(18,61,49,.2);
+      border-radius:14px;display:grid;place-items:center;
+      font-size:1.35rem;margin-bottom:22px;
+    }
+    .card h3{font-family:"Playfair Display",serif;font-size:1.35rem;margin-bottom:10px}
+    .card p{font-size:.86rem;color:var(--muted)}
+
+    /* PROCESS */
+    .process{background:var(--green);color:#fff;position:relative;overflow:hidden}
+    .process:before,.process:after{
+      content:"";position:absolute;border:1px solid rgba(255,255,255,.08);
+      border-radius:50%;pointer-events:none;
+    }
+    .process:before{width:600px;height:600px;left:-360px;top:-230px}
+    .process:after{width:500px;height:500px;right:-280px;bottom:-260px}
+    .process .section-label{color:#b5d3c5}
+    .process h2{color:#fff}
+    .process .accent-line{background:#b5d3c5;margin-left:auto;margin-right:auto}
+    .steps{
+      display:grid;grid-template-columns:repeat(6,1fr);
+      gap:15px;position:relative;z-index:1;
+    }
+    .step{text-align:center;position:relative}
+    .step:not(:last-child):after{
+      content:"";position:absolute;
+      top:29px;left:calc(50% + 36px);
+      width:calc(100% - 70px);
+      border-top:1px dashed rgba(255,255,255,.45);
+    }
+    .step-icon{
+      width:58px;height:58px;border:1px solid rgba(255,255,255,.55);
+      border-radius:50%;display:grid;place-items:center;
+      margin:0 auto 15px;font-size:1.25rem;background:rgba(255,255,255,.03)
+    }
+    .step h3{font-size:.9rem;margin-bottom:4px}
+    .step p{font-size:.72rem;color:rgba(255,255,255,.7);max-width:145px;margin:auto}
+
+    /* PROJECTS */
+    .projects-grid{
+      display:grid;grid-template-columns:1.25fr .75fr;gap:20px;
+    }
+    .project{
+      min-height:270px;border-radius:20px;overflow:hidden;
+      position:relative;background:#ddd;
+      background-position:center;background-size:cover;
+    }
+    .project:nth-child(1){background-image:url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85")}
+    .project:nth-child(2){background-image:url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=85")}
+    .project:nth-child(3){background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85")}
+    .project .overlay{
+      position:absolute;inset:0;
+      display:flex;align-items:flex-end;
+      padding:25px;color:#fff;
+      background:linear-gradient(transparent 35%,rgba(0,0,0,.72));
+    }
+    .project h3{font-family:"Playfair Display",serif;font-size:1.6rem}
+    .project span{font-size:.75rem;opacity:.85}
+    .project.tall{min-height:560px;grid-row:span 2}
+
+    /* CONTACT */
+    .contact{background:var(--cream)}
+    .contact-box{
+      display:grid;grid-template-columns:1.15fr .85fr;
+      gap:50px;align-items:center;
+    }
+    .contact-box h2{font-size:clamp(2.5rem,4vw,4rem)}
+    .contact-box p{color:var(--muted);max-width:520px;margin-bottom:25px}
+    .contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .contact-link{
+      background:#fff;border:1px solid var(--line);
+      padding:20px;border-radius:15px;text-align:center;
+      transition:.25s;
+    }
+    .contact-link:hover{transform:translateY(-4px)}
+    .contact-link .emoji{font-size:1.4rem;display:block;margin-bottom:7px}
+    .contact-link strong{display:block;font-size:.8rem}
+    .contact-link span{font-size:.68rem;color:var(--muted)}
+
+    footer{background:var(--green);color:#fff;padding:30px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    footer .logo{font-size:1.8rem}
+    footer p{font-size:.75rem;color:rgba(255,255,255,.65)}
+
+    /* RESPONSIVE */
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}
+      .hero{padding-top:130px}
+      .hero-visual{min-height:520px}
+      .hero-copy{order:1}.hero-visual{order:2}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(3,1fr);gap:35px 15px}
+      .step:not(:last-child):after{display:none}
+      .projects-grid{grid-template-columns:1fr 1fr}
+      .project.tall{min-height:430px}
+      .about-image{max-width:620px}
+    }
+
+    @media(max-width:620px){
+      .container{width:min(92%,540px)}
+      .hero{min-height:auto;padding:115px 0 35px}
+      h1{font-size:3rem}
+      .hero-visual{min-height:390px}
+      .portrait{width:90%;height:420px;right:5%;bottom:-25px}
+      .value-card{right:0;top:80px;width:170px;padding:15px}
+      .value-card .item{padding:7px 0}
+      section{padding:70px 0}
+      .cards{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .projects-grid{grid-template-columns:1fr}
+      .project.tall{min-height:300px;grid-row:auto}
+      .project{min-height:260px}
+      .contact-links{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="container nav-inner">
+        <a class="logo" href="#">MP</a>
+        <div class="nav-links">
+          <a href="#sobre">Sobre mim</a>
+          <a href="#servicos">O que faço</a>
+          <a href="#processo">Como trabalho</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <a class="nav-cta" href="#contato">◉ Vamos conversar</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Marketing • Estratégia • Projetos</span>
+          <h1>Marketing,<br>Estratégia &<br>Gestão de Projetos</h1>
+          <p class="hero-text">
+            Transformo ideias em estratégias que saem do papel e <strong>geram resultados.</strong>
+          </p>
+          <div class="buttons">
+            <a class="btn primary" href="#projetos">Conheça meu trabalho ↓</a>
+            <a class="btn secondary" href="#contato">◉ Vamos conversar</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait" aria-label="Imagem da profissional"></div>
+          <div class="value-card">
+            <div class="item"><strong>◉ Criatividade</strong><span>para comunicar</span></div>
+            <div class="item"><strong>↗ Estratégia</strong><span>para direcionar</span></div>
+            <div class="item"><strong>✓ Organização</strong><span>para fazer acontecer</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <div class="container about-grid">
+        <div class="about-image"></div>
+        <div class="about-copy">
+          <span class="section-label">Sobre mim</span>
+          <h2>Ideias com direção.<br>Estratégia com propósito.</h2>
+          <div class="accent-line"></div>
+          <p>Sou profissional de <strong>Marketing e Gestão de Projetos</strong>, apaixonada por transformar ideias em estratégias que saem do papel e geram resultados.</p>
+          <p>Minha experiência combina o lado criativo do <strong>Marketing Digital</strong> com a visão estratégica e organizada da <strong>Gestão de Projetos</strong>.</p>
+          <p>Gosto de estar envolvida em todo o processo: <strong>entender o objetivo, transformar a ideia em estratégia, colocar a mão na massa e acompanhar os resultados.</strong></p>
+          <p>Meu diferencial está justamente nessa combinação: <strong>criatividade para comunicar, estratégia para direcionar e organização para fazer acontecer.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Expertise</span>
+          <h2>O que faço</h2>
+          <div class="accent-line" style="margin:0 auto 18px"></div>
+          <p>Uma combinação de criatividade, planejamento e execução para transformar objetivos em projetos concretos.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">♡</div>
+            <h3>Social Media</h3>
+            <p>Criação de conteúdos, roteiros, legendas e peças para diferentes formatos e objetivos.</p>
+          </article>
+          <article class="card">
+            <div class="icon">▶</div>
+            <h3>Conteúdo & Edição</h3>
+            <p>Edição de vídeos e imagens para transformar ideias em conteúdos atrativos e relevantes.</p>
+          </article>
+          <article class="card">
+            <div class="icon">↗</div>
+            <h3>Meta Ads</h3>
+            <p>Planejamento e gestão de campanhas, buscando alcançar o público certo e potencializar resultados.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Gestão de Projetos</h3>
+            <p>Acompanhamento de demandas, prazos, processos e entregas com mais organização e eficiência.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="processo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Meu processo</span>
+          <h2>Como eu trabalho</h2>
+          <div class="accent-line"></div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><div class="step-icon">⌕</div><h3>Entender</h3><p>Entendo o objetivo e o contexto.</p></div>
+          <div class="step"><div class="step-icon">☷</div><h3>Planejar</h3><p>Transformo ideias em estratégias.</p></div>
+          <div class="step"><div class="step-icon">✎</div><h3>Criar</h3><p>Coloco a criatividade em ação.</p></div>
+          <div class="step"><div class="step-icon">↗</div><h3>Executar</h3><p>Coloco em prática com foco.</p></div>
+          <div class="step"><div class="step-icon">▥</div><h3>Acompanhar</h3><p>Analiso resultados e aprendizados.</p></div>
+          <div class="step"><div class="step-icon">◎</div><h3>Otimizar</h3><p>Ajusto rotas para gerar mais resultados.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">Portfólio</span>
+          <h2>Projetos em destaque</h2>
+          <div class="accent-line" style="margin:0 auto 18px"></div>
+          <p>Substitua estas imagens pelos projetos reais da profissional.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project tall">
+            <div class="overlay"><div><span>Marketing Digital</span><h3>Estratégia de conteúdo</h3></div></div>
+          </article>
+          <article class="project">
+            <div class="overlay"><div><span>Gestão</span><h3>Planejamento de projeto</h3></div></div>
+          </article>
+          <article class="project">
+            <div class="overlay"><div><span>Social Media</span><h3>Campanha & criação</h3></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container contact-box">
+        <div>
+          <span class="section-label">Contato</span>
+          <h2>Vamos criar algo incrível juntos?</h2>
+          <div class="accent-line"></div>
+          <p>Estou pronta para entender sua ideia e transformar seu objetivo em uma estratégia que realmente gere resultados.</p>
+          <a class="btn primary" href="#">Falar comigo →</a>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link" href="#"><span class="emoji">◉</span><strong>WhatsApp</strong><span>Chamar agora</span></a>
+          <a class="contact-link" href="#"><span class="emoji">◎</span><strong>Instagram</strong><span>Me seguir</span></a>
+          <a class="contact-link" href="mailto:seuemail@email.com"><span class="emoji">✉</span><strong>E-mail</strong><span>Enviar e-mail</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">MP</div>
+        <p>Marketing, Estratégia & Gestão de Projetos</p>
+      </div>
+      <p>© 2026 Todos os direitos reservados.</p>
+      <p>Feito com propósito ♡</p>
+    </div>
+  </footer>
+</body>
+</html>
