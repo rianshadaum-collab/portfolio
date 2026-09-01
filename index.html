@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayara Yasmim — Marketing & Social Media</title>
+<meta name="description" content="Mayara Yasmim — estratégia, conteúdo e produção audiovisual para marcas que querem se destacar no digital. Social media, campanhas de anúncios e gestão de projetos.">
+<meta property="og:title" content="Mayara Yasmim — Marketing & Social Media">
+<meta property="og:description" content="Estratégia, criatividade e conteúdo para marcas que querem se destacar no digital.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#152040">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --off-white:#F6F3EA;
+    --paper:#FBF9F3;
+    --navy:#152040;
+    --navy-deep:#0D1730;
+    --ink:#20263A;
+    --ink-soft:#5B6178;
+    --brass:#B08A4E;
+    --brass-soft:#D9C4A0;
+    --hairline:#DCD3BE;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--off-white); color:var(--ink); font-family:'Inter',sans-serif; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',serif; font-weight:500; color:var(--navy); letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  button{font-family:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  .eyebrow{font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass); font-weight:600;}
+  :focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
+
+  /* NAV */
+  header{position:sticky; top:0; z-index:50; background:rgba(246,243,234,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--hairline);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; height:84px; position:relative;}
+  .logo{font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:10px;}
+  .logo .dot{width:7px; height:7px; border-radius:50%; background:var(--brass); display:inline-block;}
+  .nav-links{display:none; gap:38px; list-style:none;}
+  @media(min-width:900px){.nav-links{display:flex;}}
+  .nav-links a{font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; padding-bottom:4px; border-bottom:1px solid transparent; transition:color .2s, border-color .2s;}
+  .nav-links a:hover{color:var(--navy); border-color:var(--brass);}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 24px; font-size:13px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; border-radius:var(--radius); border:1px solid transparent; cursor:pointer; transition:all .2s ease; white-space:nowrap;}
+  .btn-primary{background:var(--navy); color:var(--off-white);}
+  .btn-primary:hover{background:var(--navy-deep);}
+  .btn-outline{background:transparent; color:var(--navy); border-color:var(--navy);}
+  .btn-outline:hover{background:var(--navy); color:var(--off-white);}
+  .btn-brass{background:var(--brass); color:var(--navy-deep);}
+  .btn-brass:hover{background:#9c7940;}
+  .btn-whats{background:#1F3B2C; color:#EFE9DA;}
+  .btn-whats:hover{background:#16291F;}
+  .nav-cta{display:none;}
+  @media(min-width:900px){.nav-cta{display:inline-flex;}}
+  .burger{display:block; font-size:22px; background:none; border:none; color:var(--navy); cursor:pointer; line-height:1; padding:4px;}
+  @media(min-width:900px){.burger{display:none;}}
+
+  /* mobile menu drawer */
+  .mobile-menu{position:fixed; inset:84px 0 0 0; background:var(--off-white); z-index:49; transform:translateY(-8px); opacity:0; pointer-events:none; transition:opacity .22s ease, transform .22s ease; border-top:1px solid var(--hairline);}
+  .mobile-menu.open{opacity:1; transform:none; pointer-events:auto;}
+  .mobile-menu ul{list-style:none; display:flex; flex-direction:column; padding:12px 32px;}
+  .mobile-menu li{border-bottom:1px solid var(--hairline);}
+  .mobile-menu a{display:block; padding:18px 0; font-family:'Fraunces',serif; font-size:20px; color:var(--navy);}
+  .mobile-menu .btn{margin:28px 0 0;}
+  @media(min-width:900px){.mobile-menu{display:none;}}
+  body.menu-open{overflow:hidden;}
+
+  section{padding:100px 0;}
+  h2{font-size:clamp(28px,3.4vw,38px); margin-bottom:22px;}
+  h2 .rule{display:block; width:52px; height:3px; background:var(--brass); margin-top:14px;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1; transform:none; transition:none;} html{scroll-behavior:auto;}}
+
+  /* ---- SEÇÃO 1: CAPA ---- */
+  .hero{position:relative; overflow:hidden; min-height:92vh; display:flex; align-items:center; padding-top:84px;}
+  .hero-bg{position:absolute; inset:0; z-index:0;}
+  .hero-bg svg{width:100%; height:100%;}
+  .hero-content{position:relative; z-index:1; text-align:center; max-width:760px; margin:0 auto;}
+  .hero-content .eyebrow{display:block; margin-bottom:22px;}
+  .hero-content h1{font-size:clamp(46px,8vw,84px); line-height:0.98; margin-bottom:22px;}
+  .hero-content h1 em{font-style:italic; color:var(--brass);}
+  .hero-content p{font-size:19px; color:var(--ink-soft); max-width:480px; margin:0 auto 40px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
+  .scroll-cue{position:absolute; bottom:36px; left:50%; transform:translateX(-50%); z-index:1; display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--ink-soft); font-size:12px; letter-spacing:.14em; text-transform:uppercase;}
+  .scroll-cue .arrow{animation:bob 2s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);}}
+  @media (prefers-reduced-motion: reduce){.scroll-cue .arrow{animation:none;}}
+
+  /* ---- SEÇÃO 2: SOBRE ---- */
+  .about{display:grid; grid-template-columns:1fr; gap:52px; align-items:center; border-top:1px solid var(--hairline);}
+  @media(min-width:900px){.about{grid-template-columns:0.85fr 1.15fr;}}
+  .about-photo{position:relative; border-radius:var(--radius); overflow:hidden; background:var(--navy); aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;}
+  .about-photo img{width:100%; height:100%; object-fit:cover; object-position:center 25%;}
+  .about-photo .tag{position:absolute; left:20px; bottom:20px; background:rgba(13,23,48,0.85); color:var(--brass-soft); font-size:12px; letter-spacing:.1em; text-transform:uppercase; padding:8px 14px; border-radius:var(--radius);}
+  .about-copy p{color:var(--ink-soft); margin-bottom:16px; max-width:560px;}
+  .about-copy strong{color:var(--navy); font-weight:600;}
+  .diffs{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:32px;}
+  @media(max-width:480px){.diffs{grid-template-columns:1fr;}}
+  .diff{border-top:2px solid var(--brass); padding-top:14px;}
+  .diff h4{font-family:'Fraunces',serif; font-weight:500; font-size:16px; color:var(--navy); margin-bottom:6px;}
+  .diff p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
+  /* ---- experiência / pilares (dentro de Sobre) ---- */
+  .experience{margin-top:72px; border-top:1px solid var(--hairline); padding-top:52px;}
+  .experience-head{max-width:680px; margin-bottom:36px;}
+  .experience-head p{color:var(--ink-soft); margin-top:16px;}
+  .pillars{display:grid; grid-template-columns:1fr; gap:1px; background:var(--hairline); border:1px solid var(--hairline);}
+  @media(min-width:700px){.pillars{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1080px){.pillars{grid-template-columns:repeat(4,1fr);}}
+  .pillar{background:var(--paper); padding:34px 28px; transition:background .25s;}
+  .pillar:hover{background:#fff;}
+  .pillar-num{font-family:'Fraunces',serif; font-size:13px; color:var(--brass); letter-spacing:.08em; display:block; margin-bottom:20px;}
+  .pillar h3{font-size:18px; margin-bottom:18px; font-weight:500; line-height:1.25;}
+  .pillar-tags{font-size:13.5px; color:var(--ink-soft); line-height:1.9;}
+  .pillar-tags .sep{color:var(--brass); margin:0 7px; font-size:11px;}
+
+  /* ---- SEÇÃO 3: SERVIÇOS ---- */
+  .services{border-top:1px solid var(--hairline);}
+  .services-head{max-width:560px; margin-bottom:52px;}
+  .service-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--hairline); border:1px solid var(--hairline);}
+  @media(min-width:700px){.service-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1080px){.service-grid{grid-template-columns:repeat(4,1fr);}}
+  .service-card{background:var(--paper); padding:38px 30px; transition:background .25s;}
+  .service-card:hover{background:#fff;}
+  .service-num{font-family:'Fraunces',serif; font-size:13px; color:var(--brass); letter-spacing:.08em; margin-bottom:22px; display:block;}
+  .service-card h3{font-size:19px; margin-bottom:12px; font-weight:500;}
+  .service-card p{font-size:14.5px; color:var(--ink-soft);}
+
+  /* ---- SEÇÃO 4: PORTFÓLIO ---- */
+  .portfolio{background:var(--navy); color:var(--off-white); position:relative; overflow:hidden;}
+  .portfolio::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 88% 10%, rgba(176,138,78,0.14), transparent 55%); pointer-events:none;}
+  .portfolio-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:44px; position:relative;}
+  .portfolio h2{color:var(--off-white);}
+  .portfolio-head p{color:rgba(255,255,255,0.6); margin-top:14px; max-width:440px;}
+  .filters{display:flex; flex-wrap:wrap; gap:10px; position:relative; margin-bottom:40px;}
+  .filter-btn{padding:9px 18px; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; border-radius:999px; border:1px solid rgba(255,255,255,0.25); background:transparent; color:rgba(255,255,255,0.75); cursor:pointer; transition:all .2s;}
+  .filter-btn:hover{border-color:var(--brass-soft); color:#fff;}
+  .filter-btn.active{background:var(--brass); color:var(--navy-deep); border-color:var(--brass); font-weight:600;}
+  .grid-portfolio{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:22px; position:relative;}
+  .pf-card{background:var(--navy-deep); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:transform .25s, border-color .25s;}
+  .pf-card:hover{transform:translateY(-4px); border-color:var(--brass-soft);}
+  .pf-media{aspect-ratio:4/5; position:relative; overflow:hidden;}
+  .pf-media svg{width:100%; height:100%;}
+  .pf-media img{width:100%; height:100%; object-fit:cover; display:block;}
+  .pf-play{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:52px; height:52px; border-radius:50%; background:rgba(13,23,48,0.75); border:1px solid rgba(255,255,255,0.3); color:var(--brass-soft); display:flex; align-items:center; justify-content:center; font-size:16px; transition:background .2s, transform .2s;}
+  .pf-media a:hover .pf-play{background:var(--brass); color:var(--navy-deep); transform:translate(-50%,-50%) scale(1.08);}
+  .pf-tag{position:absolute; top:12px; left:12px; background:rgba(13,23,48,0.85); color:var(--brass-soft); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding:5px 10px; border-radius:var(--radius);}
+  .pf-body{padding:18px 18px 22px;}
+  .pf-body .client{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:6px; display:block;}
+  a.client:hover{color:var(--brass-soft);}
+  .pf-body h3{color:var(--off-white); font-size:17px; font-weight:500; margin-bottom:8px;}
+  .pf-body p{color:rgba(255,255,255,0.6); font-size:13.5px; margin-bottom:14px;}
+  .pf-link{font-size:12.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--brass-soft); display:inline-flex; align-items:center; gap:6px;}
+  .pf-link:hover{color:#fff;}
+  .pf-soon{font-size:12.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:rgba(255,255,255,0.35); display:inline-flex; align-items:center; gap:6px;}
+  .pf-result{display:flex; gap:18px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.1); margin-top:4px;}
+  .pf-result div b{display:block; font-family:'Fraunces',serif; font-size:19px; color:var(--brass-soft);}
+  .pf-result div span{font-size:11px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.06em;}
+  .portfolio-cta{text-align:center; margin-top:52px; position:relative;}
+  .portfolio-cta p{color:rgba(255,255,255,0.55); margin-bottom:18px; font-size:14px;}
+
+  /* ---- SEÇÃO 5: CONTATO ---- */
+  .contact{border-top:1px solid var(--hairline); text-align:center;}
+  .contact-inner{max-width:620px; margin:0 auto;}
+  .contact h2{margin-bottom:16px;}
+  .contact > .wrap > p, .contact-inner p{color:var(--ink-soft); margin-bottom:8px;}
+  .contact-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:44px;}
+  @media(max-width:640px){.contact-cards{grid-template-columns:1fr;}}
+  .contact-card{background:var(--paper); border:1px solid var(--hairline); border-radius:var(--radius); padding:26px 20px; text-align:center;}
+  .contact-card .ic{width:40px; height:40px; margin:0 auto 14px; border-radius:50%; background:var(--navy); color:var(--brass-soft); display:flex; align-items:center; justify-content:center; font-size:17px;}
+  .contact-card h4{font-family:'Fraunces',serif; font-weight:500; font-size:15px; color:var(--navy); margin-bottom:14px;}
+  .contact-card .btn{width:100%; justify-content:center; font-size:11.5px; padding:11px 14px;}
+  .final-cta{margin-top:56px; background:var(--navy); border-radius:var(--radius); padding:48px 32px; color:var(--off-white);}
+  .final-cta h3{color:var(--off-white); font-size:26px; margin-bottom:10px; font-weight:500;}
+  .final-cta p{color:rgba(255,255,255,0.6); margin-bottom:26px;}
+
+  footer{background:var(--navy-deep); color:rgba(255,255,255,0.55); padding:36px 0;}
+  .foot-wrap{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; font-size:13px;}
+  .foot-logo{display:flex; align-items:center; gap:12px; color:var(--off-white); font-family:'Fraunces',serif; font-size:18px;}
+  .foot-logo .dot{width:6px;height:6px;border-radius:50%;background:var(--brass);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo"><span class="dot"></span>Mayara Yasmim</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn btn-whats nav-cta">Falar com a Mayara</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="wrap" style="padding:0 0;">
+      <a href="#contato" class="btn btn-whats" style="width:100%; justify-content:center;">Falar com a Mayara</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- SEÇÃO 1 — CAPA -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1200" height="900" fill="#F6F3EA"/>
+        <circle cx="960" cy="180" r="420" fill="#EDE7D6"/>
+        <path d="M -50 620 C 250 500, 500 700, 750 520 S 1150 380, 1300 460" stroke="#152040" stroke-width="1.5" fill="none" stroke-dasharray="1 9" opacity="0.5"/>
+        <path d="M -50 720 C 300 640, 600 820, 900 660 S 1250 560, 1350 620" stroke="#B08A4E" stroke-width="2" fill="none" opacity="0.7"/>
+        <circle cx="900" cy="660" r="7" fill="#B08A4E"/>
+      </svg>
+    </div>
+    <div class="wrap hero-content">
+      <span class="eyebrow">Marketing &amp; Social Media</span>
+      <h1>Mayara<br><em>Yasmim</em></h1>
+      <p>Estratégia, criatividade e conteúdo para marcas que querem se destacar no digital.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-primary">Ver meus trabalhos</a>
+        <a href="#contato" class="btn btn-outline">Vamos conversar</a>
+      </div>
+    </div>
+    <a href="#sobre" class="scroll-cue"><span>Rolar</span><span class="arrow">↓</span></a>
+  </section>
+
+  <!-- SEÇÃO 2 — SOBRE MIM -->
+  <section id="sobre">
+    <div class="wrap">
+      <div class="about reveal">
+        <div class="about-photo">
+          <img src="foto-mayara.jpg" alt="Mayara Yasmim" width="640" height="800" loading="lazy">
+          <span class="tag">Mayara Yasmim</span>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">Sobre mim</span>
+          <h2>Conteúdo com estratégia por trás<span class="rule"></span></h2>
+          <p>Sou especialista em Marketing e Social Media, e ajudo marcas a construir presença digital de verdade: com identidade, consistência e resultado.</p>
+          <p>Acredito que <strong>criatividade sem estratégia é só ruído</strong>. Por isso, cada conteúdo que crio nasce de um objetivo claro — seja engajar, vender ou fortalecer uma marca.</p>
+          <p>Já trabalhei com negócios de diferentes tamanhos e segmentos, sempre com o mesmo cuidado: entender quem é o cliente do meu cliente antes de criar qualquer peça.</p>
+          <div class="diffs">
+            <div class="diff"><h4>Estratégia primeiro</h4><p>Todo conteúdo parte de um objetivo, nunca do improviso.</p></div>
+            <div class="diff"><h4>Identidade visual</h4><p>Cada marca ganha uma linguagem única, reconhecível.</p></div>
+            <div class="diff"><h4>Dados & resultado</h4><p>Acompanho métricas para ajustar a rota sempre que preciso.</p></div>
+            <div class="diff"><h4>Parceria de verdade</h4><p>Comunicação próxima, prazos cumpridos, entrega com cuidado.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- O que eu faço -->
+      <div class="experience reveal">
+        <div class="experience-head">
+          <span class="eyebrow">Experiência</span>
+          <h2 style="margin-top:14px;">O que eu faço<span class="rule"></span></h2>
+          <p>Atualmente trabalho sob 4 pilares de serviços:</p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pillar-num">01</span>
+            <h3>Conteúdo &amp; Social Media</h3>
+            <p class="pillar-tags">Roteiro <span class="sep">•</span> Pesquisa <span class="sep">•</span> Copy <span class="sep">•</span> Planejamento <span class="sep">•</span> Gravação <span class="sep">•</span> Edição</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">02</span>
+            <h3>Audiovisual</h3>
+            <p class="pillar-tags">Reels <span class="sep">•</span> YouTube <span class="sep">•</span> Podcast <span class="sep">•</span> Edição de vídeo</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">03</span>
+            <h3>Marketing</h3>
+            <p class="pillar-tags">Meta Ads <span class="sep">•</span> Campanhas <span class="sep">•</span> Estratégia de conteúdo</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">04</span>
+            <h3>Projetos &amp; Estratégia</h3>
+            <p class="pillar-tags">Planejamento <span class="sep">•</span> Organização <span class="sep">•</span> Acompanhamento <span class="sep">•</span> Gestão de projetos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3 — SERVIÇOS -->
+  <section id="servicos" class="services">
+    <div class="wrap">
+      <div class="services-head reveal">
+        <span class="eyebrow">Serviços</span>
+        <h2 style="margin-top:14px;">O que eu ofereço<span class="rule"></span></h2>
+      </div>
+      <div class="service-grid reveal">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <h3>Social Media</h3>
+          <p>Planejamento e gestão de redes sociais, do calendário editorial à publicação, com consistência e identidade.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <h3>Conteúdo</h3>
+          <p>Roteiros, legendas e peças criadas para engajar, comunicar e converter, em cada formato.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <h3>Design</h3>
+          <p>Artes, carrosséis e identidade visual para redes sociais que fortalecem a marca em cada post.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <h3>Estratégia</h3>
+          <p>Diagnóstico, posicionamento e plano de ação para o digital, com metas claras e acompanhamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4 — PORTFÓLIO -->
+  <section id="portfolio" class="portfolio">
+    <div class="wrap">
+      <div class="portfolio-head reveal">
+        <div>
+          <span class="eyebrow" style="color:var(--brass-soft);">Trabalhos</span>
+          <h2>Portfólio</h2>
+        </div>
+        <p>Uma seleção de projetos, campanhas e resultados de marcas que já passaram pela minha estratégia.</p>
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="audiovisual">Audiovisual</button>
+      </div>
+
+      <div class="grid-portfolio reveal">
+
+        <div class="pf-card" data-cat="social">
+          <div class="pf-media">
+            <span class="pf-tag">Reel</span>
+            <a href="https://www.instagram.com/reel/DaLsDLQi3cA" target="_blank" rel="noopener" aria-label="Ver reel no Instagram" style="display:block; width:100%; height:100%;">
+              <img src="isadora-reel.png" alt="Capa do reel — Isadora Costa Advogados" width="480" height="600" loading="lazy">
+              <span class="pf-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="pf-body">
+            <a href="https://www.instagram.com/isadoracostaadvogados" target="_blank" rel="noopener" class="client">Cliente · Isadora Costa Advogados</a>
+            <h3>Reel de destaque — conteúdo jurídico</h3>
+            <p>Roteiro, gravação e edição de reel traduzindo um tema jurídico em conteúdo claro e acessível, com boa performance de visualizações.</p>
+            <a href="https://www.instagram.com/reel/DaLsDLQi3cA" target="_blank" rel="noopener" class="pf-link">Ver reel no Instagram →</a>
+          </div>
+        </div>
+
+
+        <div class="pf-card" data-cat="social">
+          <div class="pf-media">
+            <span class="pf-tag">Reel</span>
+            <a href="https://www.instagram.com/reel/Dct-tpwJTOs" target="_blank" rel="noopener" aria-label="Ver reel no Instagram" style="display:block; width:100%; height:100%;">
+              <img src="fernanda-reel.jpg" alt="Capa do reel — Espaço Fernanda Cadete" width="480" height="600" loading="lazy">
+              <span class="pf-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="pf-body">
+            <a href="https://www.instagram.com/fernandacdt" target="_blank" rel="noopener" class="client">Cliente · Espaço Fernanda Cadete</a>
+            <h3>Reel de destaque — estética e beleza</h3>
+            <p>Produção completa de reel (roteiro, gravação, edição e legendas) para o Espaço Fernanda Cadete Estética e Beleza, com boa performance de visualizações.</p>
+            <a href="https://www.instagram.com/reel/Dct-tpwJTOs" target="_blank" rel="noopener" class="pf-link">Ver reel no Instagram →</a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-cat="audiovisual">
+          <div class="pf-media">
+            <span class="pf-tag">YouTube</span>
+            <a href="https://youtu.be/A6hzEYgbV2Y" target="_blank" rel="noopener" aria-label="Assistir no YouTube" style="display:block; width:100%; height:100%;">
+              <img src="https://img.youtube.com/vi/A6hzEYgbV2Y/hqdefault.jpg" alt="Miniatura do vídeo editado" width="480" height="360" loading="lazy">
+              <span class="pf-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="pf-body">
+            <span class="client">Vídeo editado</span>
+            <h3>Edição para YouTube</h3>
+            <p>Organização do material bruto e edição final de um vídeo publicado no YouTube.</p>
+            <a href="https://youtu.be/A6hzEYgbV2Y" target="_blank" rel="noopener" class="pf-link">Assistir no YouTube →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-cta reveal">
+        <p>Quer ver mais trabalhos, incluindo os mais recentes?</p>
+        <a href="https://instagram.com/yasmim_mah" target="_blank" rel="noopener" class="btn btn-brass">Ver perfil completo no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5 — VAMOS CONVERSAR -->
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <div class="contact-inner reveal">
+        <span class="eyebrow">Contato</span>
+        <h2>Vamos conversar?</h2>
+        <p>Me conta sobre a sua marca — vamos entender juntos qual estratégia faz mais sentido para você.</p>
+      </div>
+
+      <div class="contact-cards reveal">
+        <div class="contact-card">
+          <div class="ic">◐</div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/5587998174680" class="btn btn-whats">Chamar agora</a>
+        </div>
+        <div class="contact-card">
+          <div class="ic">◑</div>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/yasmim_mah" target="_blank" rel="noopener" class="btn btn-outline">@yasmim_mah</a>
+        </div>
+        <div class="contact-card">
+          <div class="ic">◒</div>
+          <h4>E-mail</h4>
+          <a href="mailto:mayaramarketing0@gmail.com" class="btn btn-brass">Enviar e-mail</a>
+        </div>
+      </div>
+
+      <div class="final-cta reveal">
+        <h3>Pronta para elevar sua presença digital?</h3>
+        <p>Fale agora com a Mayara e descubra a melhor estratégia para a sua marca.</p>
+        <a href="https://wa.me/5587998174680" class="btn btn-whats">Quero falar com a Mayara</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-wrap">
+    <div class="foot-logo"><span class="dot"></span>Mayara Yasmim</div>
+    <div>© 2026 Todos os direitos reservados.</div>
+    <div>Feito com propósito ♡</div>
+  </div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  els.forEach(el => io.observe(el));
+
+  // portfolio filters
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.pf-card');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+
+  // mobile menu
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  function closeMenu(){
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+  burger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+</script>
+
+</body>
+</html>
