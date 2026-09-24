@@ -8,6 +8,11 @@
 <meta property="og:title" content="Mayara Yasmim — Marketing & Social Media">
 <meta property="og:description" content="Estratégia, criatividade e conteúdo para marcas que querem se destacar no digital.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<!-- TROCAR pelo domínio real e pela imagem de preview (1200x630) -->
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#152040">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,6 +29,7 @@
     --ink-soft:#5B6178;
     --brass:#B08A4E;
     --brass-soft:#D9C4A0;
+    --brass-text:#86662F;
     --hairline:#DCD3BE;
     --radius:2px;
   }
@@ -35,7 +41,7 @@
   img{max-width:100%; display:block;}
   button{font-family:inherit;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
-  .eyebrow{font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass); font-weight:600;}
+  .eyebrow{font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brass-text); font-weight:600;}
   :focus-visible{outline:2px solid var(--brass); outline-offset:3px;}
 
   /* NAV */
@@ -66,7 +72,7 @@
   .mobile-menu.open{opacity:1; transform:none; pointer-events:auto;}
   .mobile-menu ul{list-style:none; display:flex; flex-direction:column; padding:12px 32px;}
   .mobile-menu li{border-bottom:1px solid var(--hairline);}
-  .mobile-menu a{display:block; padding:18px 0; font-family:'Fraunces',serif; font-size:20px; color:var(--navy);}
+  .mobile-menu li a{display:block; padding:18px 0; font-family:'Fraunces',serif; font-size:20px; color:var(--navy);}
   .mobile-menu .btn{margin:28px 0 0;}
   @media(min-width:900px){.mobile-menu{display:none;}}
   body.menu-open{overflow:hidden;}
@@ -80,7 +86,7 @@
   @media (prefers-reduced-motion: reduce){.reveal{opacity:1; transform:none; transition:none;} html{scroll-behavior:auto;}}
 
   /* ---- SEÇÃO 1: CAPA ---- */
-  .hero{position:relative; overflow:hidden; min-height:92vh; display:flex; align-items:center; padding-top:84px;}
+  .hero{position:relative; overflow:hidden; min-height:calc(100svh - 85px); display:flex; align-items:center; padding:64px 0 110px;}
   .hero-bg{position:absolute; inset:0; z-index:0;}
   .hero-bg svg{width:100%; height:100%;}
   .hero-content{position:relative; z-index:1; text-align:center; max-width:760px; margin:0 auto;}
@@ -108,21 +114,7 @@
   .diff h4{font-family:'Fraunces',serif; font-weight:500; font-size:16px; color:var(--navy); margin-bottom:6px;}
   .diff p{font-size:13.5px; color:var(--ink-soft); margin:0;}
 
-  /* ---- experiência / pilares (dentro de Sobre) ---- */
-  .experience{margin-top:72px; border-top:1px solid var(--hairline); padding-top:52px;}
-  .experience-head{max-width:680px; margin-bottom:36px;}
-  .experience-head p{color:var(--ink-soft); margin-top:16px;}
-  .pillars{display:grid; grid-template-columns:1fr; gap:1px; background:var(--hairline); border:1px solid var(--hairline);}
-  @media(min-width:700px){.pillars{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1080px){.pillars{grid-template-columns:repeat(4,1fr);}}
-  .pillar{background:var(--paper); padding:34px 28px; transition:background .25s;}
-  .pillar:hover{background:#fff;}
-  .pillar-num{font-family:'Fraunces',serif; font-size:13px; color:var(--brass); letter-spacing:.08em; display:block; margin-bottom:20px;}
-  .pillar h3{font-size:18px; margin-bottom:18px; font-weight:500; line-height:1.25;}
-  .pillar-tags{font-size:13.5px; color:var(--ink-soft); line-height:1.9;}
-  .pillar-tags .sep{color:var(--brass); margin:0 7px; font-size:11px;}
-
-  /* ---- SEÇÃO 3: SERVIÇOS ---- */
+    /* ---- SEÇÃO 3: SERVIÇOS ---- */
   .services{border-top:1px solid var(--hairline);}
   .services-head{max-width:560px; margin-bottom:52px;}
   .service-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--hairline); border:1px solid var(--hairline);}
@@ -130,9 +122,11 @@
   @media(min-width:1080px){.service-grid{grid-template-columns:repeat(4,1fr);}}
   .service-card{background:var(--paper); padding:38px 30px; transition:background .25s;}
   .service-card:hover{background:#fff;}
-  .service-num{font-family:'Fraunces',serif; font-size:13px; color:var(--brass); letter-spacing:.08em; margin-bottom:22px; display:block;}
+  .service-num{font-family:'Fraunces',serif; font-size:13px; color:var(--brass-text); letter-spacing:.08em; margin-bottom:22px; display:block;}
   .service-card h3{font-size:19px; margin-bottom:12px; font-weight:500;}
   .service-card p{font-size:14.5px; color:var(--ink-soft);}
+  .service-card .tags{font-size:13px; color:var(--ink-soft); line-height:1.9; margin-top:18px; padding-top:14px; border-top:1px solid var(--hairline);}
+  .service-card .tags .sep{color:var(--brass); margin:0 6px; font-size:11px;}
 
   /* ---- SEÇÃO 4: PORTFÓLIO ---- */
   .portfolio{background:var(--navy); color:var(--off-white); position:relative; overflow:hidden;}
@@ -176,6 +170,7 @@
   @media(max-width:640px){.contact-cards{grid-template-columns:1fr;}}
   .contact-card{background:var(--paper); border:1px solid var(--hairline); border-radius:var(--radius); padding:26px 20px; text-align:center;}
   .contact-card .ic{width:40px; height:40px; margin:0 auto 14px; border-radius:50%; background:var(--navy); color:var(--brass-soft); display:flex; align-items:center; justify-content:center; font-size:17px;}
+  .contact-card .ic svg{width:19px; height:19px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
   .contact-card h4{font-family:'Fraunces',serif; font-weight:500; font-size:15px; color:var(--navy); margin-bottom:14px;}
   .contact-card .btn{width:100%; justify-content:center; font-size:11.5px; padding:11px 14px;}
   .final-cta{margin-top:56px; background:var(--navy); border-radius:var(--radius); padding:48px 32px; color:var(--off-white);}
@@ -199,21 +194,22 @@
       <li><a href="#portfolio">Portfólio</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <a href="#contato" class="btn btn-whats nav-cta">Falar com a Mayara</a>
+    <a href="https://wa.me/5587998174680?text=Ol%C3%A1%20Mayara%20Yasmim%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%20%F0%9F%98%8A" target="_blank" rel="noopener" class="btn btn-whats nav-cta">Vamos conversar</a>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
   </nav>
-  <div class="mobile-menu" id="mobile-menu">
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
     <ul>
       <li><a href="#sobre">Sobre mim</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#portfolio">Portfólio</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <div class="wrap" style="padding:0 0;">
-      <a href="#contato" class="btn btn-whats" style="width:100%; justify-content:center;">Falar com a Mayara</a>
+    <div class="wrap" style="padding:0 32px;">
+      <a href="https://wa.me/5587998174680?text=Ol%C3%A1%20Mayara%20Yasmim%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%20%F0%9F%98%8A" target="_blank" rel="noopener" class="btn btn-whats" style="width:100%; justify-content:center;">Vamos conversar</a>
     </div>
-  </div>
-</header>
+</div>
 
 <main id="top">
 
@@ -251,46 +247,14 @@
         <div class="about-copy">
           <span class="eyebrow">Sobre mim</span>
           <h2>Conteúdo com estratégia por trás<span class="rule"></span></h2>
-          <p>Sou especialista em Marketing e Social Media, e ajudo marcas a construir presença digital de verdade: com identidade, consistência e resultado.</p>
-          <p>Acredito que <strong>criatividade sem estratégia é só ruído</strong>. Por isso, cada conteúdo que crio nasce de um objetivo claro — seja engajar, vender ou fortalecer uma marca.</p>
-          <p>Já trabalhei com negócios de diferentes tamanhos e segmentos, sempre com o mesmo cuidado: entender quem é o cliente do meu cliente antes de criar qualquer peça.</p>
+          <p>Sou especialista em Marketing e Social Media e ajudo marcas a transformar presença digital em posicionamento, conexão e resultado.</p>
+          <p>Acredito que <strong>criatividade sem estratégia é só ruído</strong>. Por isso, cada projeto que desenvolvo parte de um objetivo claro, seja fortalecer uma marca, gerar conexão com o público, aumentar o engajamento ou impulsionar vendas.</p>
+          <p>Ao longo da minha trajetória, já trabalhei com negócios de diferentes tamanhos e segmentos. Em cada projeto, começo pelo mesmo ponto: entender a marca, o mercado e, principalmente, o cliente do meu cliente. Só então transformo estratégia em conteúdo, identidade e comunicação que fazem sentido.</p>
           <div class="diffs">
-            <div class="diff"><h4>Estratégia primeiro</h4><p>Todo conteúdo parte de um objetivo, nunca do improviso.</p></div>
-            <div class="diff"><h4>Identidade visual</h4><p>Cada marca ganha uma linguagem única, reconhecível.</p></div>
-            <div class="diff"><h4>Dados & resultado</h4><p>Acompanho métricas para ajustar a rota sempre que preciso.</p></div>
-            <div class="diff"><h4>Parceria de verdade</h4><p>Comunicação próxima, prazos cumpridos, entrega com cuidado.</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- O que eu faço -->
-      <div class="experience reveal">
-        <div class="experience-head">
-          <span class="eyebrow">Experiência</span>
-          <h2 style="margin-top:14px;">O que eu faço<span class="rule"></span></h2>
-          <p>Atualmente trabalho sob 4 pilares de serviços:</p>
-        </div>
-
-        <div class="pillars">
-          <div class="pillar">
-            <span class="pillar-num">01</span>
-            <h3>Conteúdo &amp; Social Media</h3>
-            <p class="pillar-tags">Roteiro <span class="sep">•</span> Pesquisa <span class="sep">•</span> Copy <span class="sep">•</span> Planejamento <span class="sep">•</span> Gravação <span class="sep">•</span> Edição</p>
-          </div>
-          <div class="pillar">
-            <span class="pillar-num">02</span>
-            <h3>Audiovisual</h3>
-            <p class="pillar-tags">Reels <span class="sep">•</span> YouTube <span class="sep">•</span> Podcast <span class="sep">•</span> Edição de vídeo</p>
-          </div>
-          <div class="pillar">
-            <span class="pillar-num">03</span>
-            <h3>Marketing</h3>
-            <p class="pillar-tags">Meta Ads <span class="sep">•</span> Campanhas <span class="sep">•</span> Estratégia de conteúdo</p>
-          </div>
-          <div class="pillar">
-            <span class="pillar-num">04</span>
-            <h3>Projetos &amp; Estratégia</h3>
-            <p class="pillar-tags">Planejamento <span class="sep">•</span> Organização <span class="sep">•</span> Acompanhamento <span class="sep">•</span> Gestão de projetos</p>
+            <div class="diff"><h4>Estratégia primeiro</h4><p>Todo conteúdo nasce de um objetivo claro e nunca do improviso.</p></div>
+            <div class="diff"><h4>Identidade visual</h4><p>Cada marca tem uma linguagem própria, consistente e reconhecível.</p></div>
+            <div class="diff"><h4>Dados &amp; resultados</h4><p>Acompanho métricas, analiso o que funciona e ajusto a rota para buscar resultados cada vez melhores.</p></div>
+            <div class="diff"><h4>Parceria de verdade</h4><p>Comunicação próxima, prazos cumpridos e cuidado em cada etapa da entrega.</p></div>
           </div>
         </div>
       </div>
@@ -307,23 +271,27 @@
       <div class="service-grid reveal">
         <div class="service-card">
           <span class="service-num">01</span>
-          <h3>Social Media</h3>
-          <p>Planejamento e gestão de redes sociais, do calendário editorial à publicação, com consistência e identidade.</p>
+          <h3>Conteúdo &amp; Social Media</h3>
+          <p>Planejamento, roteiro e gestão das redes, do calendário editorial à publicação, com consistência e identidade.</p>
+          <p class="tags">Roteiro <span class="sep">•</span> Copy <span class="sep">•</span> Planejamento <span class="sep">•</span> Artes e carrosséis</p>
         </div>
         <div class="service-card">
           <span class="service-num">02</span>
-          <h3>Conteúdo</h3>
-          <p>Roteiros, legendas e peças criadas para engajar, comunicar e converter, em cada formato.</p>
+          <h3>Audiovisual</h3>
+          <p>Gravação e edição de vídeos pensados para prender atenção e comunicar a marca em cada formato.</p>
+          <p class="tags">Reels <span class="sep">•</span> YouTube <span class="sep">•</span> Podcast <span class="sep">•</span> Edição de vídeo</p>
         </div>
         <div class="service-card">
           <span class="service-num">03</span>
-          <h3>Design</h3>
-          <p>Artes, carrosséis e identidade visual para redes sociais que fortalecem a marca em cada post.</p>
+          <h3>Marketing</h3>
+          <p>Campanhas e anúncios com objetivo claro, acompanhados por métricas para ajustar a rota.</p>
+          <p class="tags">Meta Ads <span class="sep">•</span> Campanhas <span class="sep">•</span> Estratégia de conteúdo</p>
         </div>
         <div class="service-card">
           <span class="service-num">04</span>
-          <h3>Estratégia</h3>
-          <p>Diagnóstico, posicionamento e plano de ação para o digital, com metas claras e acompanhamento.</p>
+          <h3>Projetos &amp; Estratégia</h3>
+          <p>Diagnóstico, posicionamento e plano de ação para o digital, com organização e acompanhamento.</p>
+          <p class="tags">Planejamento <span class="sep">•</span> Gestão de projetos <span class="sep">•</span> Acompanhamento</p>
         </div>
       </div>
     </div>
@@ -337,7 +305,7 @@
           <span class="eyebrow" style="color:var(--brass-soft);">Trabalhos</span>
           <h2>Portfólio</h2>
         </div>
-        <p>Uma seleção de projetos, campanhas e resultados de marcas que já passaram pela minha estratégia.</p>
+        <p>Uma seleção de trabalhos de marcas que já passaram pela minha estratégia.</p>
       </div>
 
       <div class="filters reveal">
@@ -381,6 +349,22 @@
           </div>
         </div>
 
+        <div class="pf-card" data-cat="social">
+          <div class="pf-media">
+            <span class="pf-tag">Reel</span>
+            <a href="https://www.instagram.com/reel/DdjWe1yRuie/" target="_blank" rel="noopener" aria-label="Ver reel no Instagram" style="display:block; width:100%; height:100%;">
+              <img src="ultracuidado-reel.jpg" alt="Capa do reel — Ultracuidado" width="480" height="600" loading="lazy">
+              <span class="pf-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="pf-body">
+            <span class="client">Cliente · Ultracuidado</span>
+            <h3>Reel — Ultracuidado</h3>
+            <p>Reel produzido para a Ultracuidado.</p>
+            <a href="https://www.instagram.com/reel/DdjWe1yRuie/" target="_blank" rel="noopener" class="pf-link">Ver reel no Instagram →</a>
+          </div>
+        </div>
+
         <div class="pf-card" data-cat="audiovisual">
           <div class="pf-media">
             <span class="pf-tag">YouTube</span>
@@ -394,6 +378,22 @@
             <h3>Edição para YouTube</h3>
             <p>Organização do material bruto e edição final de um vídeo publicado no YouTube.</p>
             <a href="https://youtu.be/A6hzEYgbV2Y" target="_blank" rel="noopener" class="pf-link">Assistir no YouTube →</a>
+          </div>
+        </div>
+
+        <div class="pf-card" data-cat="audiovisual">
+          <div class="pf-media">
+            <span class="pf-tag">Podcast</span>
+            <a href="https://open.spotify.com/show/033peJPTu1Cgwa3SljhEwy" target="_blank" rel="noopener" aria-label="Ouvir podcast no Spotify" style="display:block; width:100%; height:100%;">
+              <img src="podcast-capa.jpg" alt="Capa do podcast" width="480" height="600" loading="lazy">
+              <span class="pf-play" aria-hidden="true">▶</span>
+            </a>
+          </div>
+          <div class="pf-body">
+            <span class="client">Podcast</span>
+            <h3>Podcast no Spotify</h3>
+            <p>Projeto de podcast disponível no Spotify.</p>
+            <a href="https://open.spotify.com/show/033peJPTu1Cgwa3SljhEwy" target="_blank" rel="noopener" class="pf-link">Ouvir no Spotify →</a>
           </div>
         </div>
 
@@ -417,26 +417,26 @@
 
       <div class="contact-cards reveal">
         <div class="contact-card">
-          <div class="ic">◐</div>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
           <h4>WhatsApp</h4>
-          <a href="https://wa.me/5587998174680" class="btn btn-whats">Chamar agora</a>
+          <a href="https://wa.me/5587998174680?text=Ol%C3%A1%20Mayara%20Yasmim%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%20%F0%9F%98%8A" target="_blank" rel="noopener" class="btn btn-whats">Chamar agora</a>
         </div>
         <div class="contact-card">
-          <div class="ic">◑</div>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></div>
           <h4>Instagram</h4>
           <a href="https://instagram.com/yasmim_mah" target="_blank" rel="noopener" class="btn btn-outline">@yasmim_mah</a>
         </div>
         <div class="contact-card">
-          <div class="ic">◒</div>
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
           <h4>E-mail</h4>
           <a href="mailto:mayaramarketing0@gmail.com" class="btn btn-brass">Enviar e-mail</a>
         </div>
       </div>
 
       <div class="final-cta reveal">
-        <h3>Pronta para elevar sua presença digital?</h3>
-        <p>Fale agora com a Mayara e descubra a melhor estratégia para a sua marca.</p>
-        <a href="https://wa.me/5587998174680" class="btn btn-whats">Quero falar com a Mayara</a>
+        <h3>Vamos elevar a presença digital da sua marca?</h3>
+        <p>Me chama no WhatsApp e vamos descobrir juntos a melhor estratégia para o seu negócio.</p>
+        <a href="https://wa.me/5587998174680?text=Ol%C3%A1%20Mayara%20Yasmim%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%20%F0%9F%98%8A" target="_blank" rel="noopener" class="btn btn-whats">Chamar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -459,9 +459,10 @@
   }, {threshold:0.12});
   els.forEach(el => io.observe(el));
 
-  // portfolio filters
+  // portfolio filters (ficam ocultos até haver 6+ trabalhos)
   const buttons = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.pf-card');
+  if(cards.length < 6) document.querySelector('.filters').style.display = 'none';
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
@@ -476,17 +477,17 @@
   // mobile menu
   const burger = document.querySelector('.burger');
   const mobileMenu = document.getElementById('mobile-menu');
-  function closeMenu(){
-    mobileMenu.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('menu-open');
+  function setMenu(open){
+    mobileMenu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    burger.textContent = open ? '✕' : '☰';
+    document.body.classList.toggle('menu-open', open);
   }
-  burger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('menu-open', isOpen);
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  burger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') setMenu(false); });
+  matchMedia('(min-width:900px)').addEventListener('change', e => { if(e.matches) setMenu(false); });
 </script>
 
 </body>
